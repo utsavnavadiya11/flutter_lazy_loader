@@ -5,9 +5,8 @@ import 'package:get/get.dart';
 import 'screens/home_screen.dart';
 
 void main() {
-  runApp(
-      // Get.put(ApiController());
-      const MyApp());
+  Get.put(ApiController());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
